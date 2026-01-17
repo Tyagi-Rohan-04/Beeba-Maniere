@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import PayPalButton from "./PayPalButton";
 
 const cart = {
   products: [
@@ -37,6 +38,11 @@ const Checkout = () => {
   const handleCreateCheckout = (e) => {
     e.preventDefault();
     setCheckoutId(123);
+  };
+
+  const handlePaymentSuccess = (details) => {
+    console.log("Payment Successfull", details);
+    navigate("/order-confirmation");
   };
 
   return (
@@ -95,7 +101,7 @@ const Checkout = () => {
               value={shippingAddress.address}
               onChange={(e) =>
                 setShippingAddress({
-                  ...setShippingAddress,
+                  ...shippingAddress,
                   address: e.target.value,
                 })
               }
@@ -142,7 +148,7 @@ const Checkout = () => {
               value={shippingAddress.country}
               onChange={(e) =>
                 setShippingAddress({
-                  ...setShippingAddress,
+                  ...shippingAddress,
                   country: e.target.value,
                 })
               }
@@ -157,7 +163,7 @@ const Checkout = () => {
               value={shippingAddress.phone}
               onChange={(e) =>
                 setShippingAddress({
-                  ...setShippingAddress,
+                  ...shippingAddress,
                   phone: e.target.value,
                 })
               }
@@ -176,7 +182,11 @@ const Checkout = () => {
             ) : (
               <div>
                 <h3 className="text-lg mb-4">Pay with Paypal</h3>
-                {/* Paypal Component */}
+                <PayPalButton
+                  amount={100}
+                  onSuccess={handlePaymentSuccess}
+                  onError={(err) => alert("Payment failed. Try again.")}
+                />
               </div>
             )}
           </div>
