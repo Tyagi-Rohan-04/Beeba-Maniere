@@ -22,7 +22,7 @@ const GenderCollectionSection = () => {
               to="/collections/all?gender=Women"
               className="text-gray-900 underline"
             >
-                Shop Now
+              Shop Now
             </Link>
           </div>
         </div>
@@ -42,7 +42,7 @@ const GenderCollectionSection = () => {
               to="/collections/all?gender=Men"
               className="text-gray-900 underline"
             >
-                Shop Now
+              Shop Now
             </Link>
           </div>
         </div>

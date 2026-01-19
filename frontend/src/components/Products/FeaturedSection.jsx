@@ -1,5 +1,9 @@
 import React from "react";
-import { HiArrowPathRoundedSquare, HiOutlineCreditCard, HiShoppingBag } from "react-icons/hi2";
+import {
+  HiArrowPathRoundedSquare,
+  HiOutlineCreditCard,
+  HiShoppingBag,
+} from "react-icons/hi2";
 
 const FeaturedSection = () => {
   return (
@@ -37,7 +41,6 @@ const FeaturedSection = () => {
             100% secured checkout process
           </p>
         </div>
-
       </div>
     </section>
   );

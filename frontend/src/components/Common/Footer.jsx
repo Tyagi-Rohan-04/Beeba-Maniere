@@ -2,7 +2,7 @@ import React from "react";
 import { IoLogoInstagram } from "react-icons/io";
 import { RiTwitterXLine } from "react-icons/ri";
 import { TbBrandMeta } from "react-icons/tb";
-import {FiPhoneCall} from "react-icons/fi"
+import { FiPhoneCall } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -117,7 +117,7 @@ const Footer = () => {
           </div>
           <p className="text-gray-500">Call Us</p>
           <p>
-            <FiPhoneCall className="inline-block mr-2"/>
+            <FiPhoneCall className="inline-block mr-2" />
             0123456789
           </p>
         </div>
@@ -125,7 +125,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="container mx-auto mt-12 px-4 lg:px-0 border-t border-gray-200 pt-6">
         <p className="text-gray-500 text-sm tracking-tighter text-center">
-            © 2025, Beeba Maniere. All Rights Reserved
+          © 2025, Beeba Maniere. All Rights Reserved
         </p>
       </div>
     </footer>
