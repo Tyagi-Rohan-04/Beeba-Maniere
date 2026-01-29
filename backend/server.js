@@ -10,6 +10,7 @@ const orderRoutes = require("./routes/orderRoutes");
 const uploadRoutes = require("./routes/uploadRoutes");
 const subscriberRoute = require("./routes/subscriberRoute");
 const adminRoutes = require("./routes/adminRoutes");
+const productAdminRoutes = require("./routes/productAdminRoutes");
 
 const app = express();
 app.use(express.json());
@@ -35,10 +36,9 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api", subscriberRoute);
 
-
 // Admin Routes
 app.use("/api/admin/users", adminRoutes);
-
+app.use("/api/admin/products", productAdminRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
