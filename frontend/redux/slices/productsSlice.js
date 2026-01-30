@@ -83,6 +83,7 @@ const productSlice = createSlice({
   initialState: {
     products: [],
     selectedProduct: null,
+    similarProducts: [],
     loading: false,
     error: null,
     filters: {
@@ -173,7 +174,7 @@ const productSlice = createSlice({
       })
       .addCase(fetchSimilarProducts.fulfilled, (state, action) => {
         state.loading = false;
-        state.products = action.payload;
+        state.similarProducts = Array.isArray(action.payload) ? action.payload : [];
       })
       .addCase(fetchSimilarProducts.rejected, (state, action) => {
         state.loading = false;
