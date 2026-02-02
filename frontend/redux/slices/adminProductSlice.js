@@ -17,12 +17,12 @@ export const fetchAdminProducts = createAsyncThunk(
   },
 );
 
-// Async function to create a new product
+// Create/update/delete use /api/products (productRoutes); only list uses /api/admin/products
 export const createProduct = createAsyncThunk(
   "adminProducts/createProduct",
   async (productData) => {
     const response = await axios.post(
-      `${API_URL}/api/admin/products`,
+      `${API_URL}/api/products`,
       productData,
       {
         headers: {
@@ -34,12 +34,11 @@ export const createProduct = createAsyncThunk(
   },
 );
 
-// Async thunk to update an existing product
 export const updateProduct = createAsyncThunk(
   "adminProducts/updateProduct",
   async ({ id, productData }) => {
     const response = await axios.put(
-      `${API_URL}/api/admin/products/${id}`,
+      `${API_URL}/api/products/${id}`,
       productData,
       {
         headers: {
@@ -51,11 +50,10 @@ export const updateProduct = createAsyncThunk(
   },
 );
 
-// Async thunk to delete a product
 export const deleteProduct = createAsyncThunk(
   "adminProducts/deleteProduct",
   async (id) => {
-    await axios.delete(`${API_URL}/api/admin/products/${id}`, {
+    await axios.delete(`${API_URL}/api/products/${id}`, {
       headers: {
         Authorization: USER_TOKEN,
       },

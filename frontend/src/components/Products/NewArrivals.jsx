@@ -124,8 +124,8 @@ const NewArrivals = () => {
             className="min-w-[100%] sm:min-w-[50%] lg:min-w-[30%] relative"
           >
             <img
-              src={product.images[0]?.url}
-              alt={product.images[0]?.altText || product.name}
+              src={product.images?.[0]?.url || "https://via.placeholder.com/400x500?text=No+Image"}
+              alt={product.images?.[0]?.altText || product.name}
               className="w-full h-[500px] object-cover rounded-lg"
               draggable="false"
             />
