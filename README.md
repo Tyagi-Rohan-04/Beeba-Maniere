@@ -66,7 +66,8 @@ Below is what powers this application:
 ## 🖥️ Screenshots
 
 ### 🧑‍💻 Login Page
-![Login](assets/login.png)
+![Login](<img width="1920" height="868" alt="image" src="https://github.com/user-attachments/assets/5c292c24-f990-44cf-a1a2-d46476bddd6f" />
+)
 
 ### 📋 Dashboard
 ![Dashboard](assets/dashboard.png)
