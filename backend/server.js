@@ -15,7 +15,10 @@ const adminOrderRoutes = require("./routes/adminOrderRoutes");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://beeba-maniere-r8b.vercel.app", // your frontend URL
+  credentials: true,
+}));
 
 dotenv.config();
 
