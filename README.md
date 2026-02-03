@@ -1,8 +1,4 @@
-<!-- PROJECT LOGO -->
 <p align="center">
-  <a href="https://github.com/Tyagi-Rohan-04/Beeba-Maniere">
-    <img src="assets/logo.png" alt="Beeba-Maniere Logo" width="150" />
-  </a>
   <h1 align="center">Beeba-Maniere</h1>
 
   <!-- BADGES -->
